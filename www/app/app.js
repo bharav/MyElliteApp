@@ -29,6 +29,14 @@ angular.module('eliteApp', ['ionic'])
     url: '/home',
     templateUrl: 'app/home/home.html'
   })
+  .state('app.teams', {
+    url: '/app/teams',
+    templateUrl: 'app/teams/teams.html'
+  })
+  .state('app.teams-detail', {
+    url: '/app/teams/:id',
+    templateUrl: 'app/teams/teams-detail.html'
+  })
   .state('app', {
     url: '/app',
     templateUrl: 'app/layout/menu-layout.html'
