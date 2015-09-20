@@ -9,7 +9,7 @@
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
-    <ion-nav-view name="menuContent"></ion-nav-view>
+    <ion-nav-view name="mainContent"></ion-nav-view>
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
@@ -18,11 +18,11 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close s-uref="home.leagues">Home</ion-item>
-        <ion-item menu-close s-uref="app.teams">Teams</ion-item>
-        <ion-item menu-close s-uref="app.standings">Standings</ion-item>
-        <ion-item menu-close s-uref="app.locations">Location</ion-item>
-        <ion-item menu-close s-uref="app.rules">Rules</ion-item>
+        <ion-item menu-close nav-clear ui-sref="home.leagues">Home</ion-item>
+        <ion-item menu-close nav-clear ui-sref="app.teams">Teams</ion-item>
+        <ion-item menu-close nav-clear ui-sref="app.standings">Standings</ion-item>
+        <ion-item menu-close nav-clear ui-sref="app.locations">Location</ion-item>
+        <ion-item menu-close nav-clear ui-sref="app.rules">Rules</ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
