@@ -27,8 +27,25 @@ angular.module('eliteApp', ['ionic'])
   // setup an abstract state for the tabs directive
     .state('home', {
     url: '/home',
+    abstract:true,
     templateUrl: 'app/home/home.html'
   })
+  .state('home.myteams', {
+    url: '/myteams',
+    views:{
+      "tab-myteams":{
+      templateUrl: 'app/home/myteams.html'
+      }
+    }
+  })
+ .state('home.leagues', {
+    url: '/leagues',
+    view:{
+      "tab-leagues":{
+        templateUrl: 'app/home/leagues.html'    
+      }
+    }
+  })  
   .state('app.teams', {
     url: '/app/teams',
     templateUrl: 'app/teams/teams.html'
@@ -42,6 +59,6 @@ angular.module('eliteApp', ['ionic'])
     templateUrl: 'app/layout/menu-layout.html'
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app');
+  $urlRouterProvider.otherwise('/home/leagues');
 
 });
