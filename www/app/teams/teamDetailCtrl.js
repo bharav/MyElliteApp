@@ -33,6 +33,16 @@
 			};
 			
 		}).value();
+		vm.teamStanding =_.chain(data.standings)
+		                  .pluck("divisionStandings")
+						  .flatten()
+						  .find({"teamId":vm.teamId})
+						  .value();
+		vm.following = false;
+		vm.toggleFollow = function(){
+			
+			vm.following = !vm.following;
+		};
 		
 		function isTeamInGame(item)
 		{
